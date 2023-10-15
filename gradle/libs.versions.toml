@@ -1,0 +1,17 @@
+[versions]
+junitVer = "5.9.1"
+guavaVer = "32.1.2-jre"
+jmonkeyCoreVer = "3.6.1-stable"
+jmonkeylwjgl3Ver = "3.6.1-stable"
+jmonkeyDesktopVer = "3.6.1-stable"
+
+
+
+
+[libraries]
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitVer"}
+guava = { module = "com.google.guava:guava", version.ref = "guavaVer"}
+jmonkeyEngineCore = { module = "org.jmonkeyengine:jme3-core", version.ref = "jmonkeyCoreVer" } 
+jmonkeyEnginelwjgl = { module = "org.jmonkeyengine:jme3-lwjgl3", version.ref = "jmonkeylwjgl3Ver" } 
+jmonkeyEngineDesktop = { module ="org.jmonkeyengine:jme3-desktop", version.ref = "jmonkeyDesktopVer" } 
+

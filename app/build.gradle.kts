@@ -18,10 +18,13 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation(libs.junit)
 
     // This dependency is used by the application.
-    implementation("com.google.guava:guava:31.0.1-jre")
+    implementation(libs.guava)
+    implementation(libs.jmonkeyEngineCore)
+    implementation(libs.jmonkeyEnginelwjgl)
+    implementation(libs.jmonkeyEngineDesktop)
 }
 
 // java {
