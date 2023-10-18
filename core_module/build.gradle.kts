@@ -24,10 +24,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
-    implementation(libs.jmonkeyEngineCore)
-    implementation(libs.jmonkeyEnginelwjgl)
-    implementation(libs.jmonkeyEngineDesktop)
-    implementation(project(":core_module"))
+
 }
 
 // java {
@@ -39,7 +36,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.nttn.legolization.App")
+    mainClass.set("com.nttn.legolization.Core")
 }
 
 tasks.named<Test>("test") {

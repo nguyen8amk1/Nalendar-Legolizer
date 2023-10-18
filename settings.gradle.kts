@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "Legolization"
-include("app")
+include("app", "core_module")
