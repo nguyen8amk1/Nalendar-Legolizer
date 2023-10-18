@@ -1,0 +1,1 @@
+call gradlew :render_module:run
