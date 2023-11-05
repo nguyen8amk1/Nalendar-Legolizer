@@ -34,10 +34,10 @@ dependencies {
 
 // }
 
-// application {
-//    // Define the main class for the application.
-//    mainClass.set("nttn.legolization.core.Core")
-// }
+ application {
+    // Define the main class for the application.
+    mainClass.set("nttn.legolization.core.Core")
+ }
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
