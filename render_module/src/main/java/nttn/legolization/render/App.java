@@ -11,6 +11,11 @@ import com.jme3.math.ColorRGBA;
 import nttn.legolization.core.Core;
 
 public class App extends SimpleApplication {
+    /*
+    TODO:
+        render the obj models from this link: https://github.com/alecjacobson/common-3d-test-models/tree/master
+            -> get all the models using "git submodule"
+    *  */
     public static void main(String[] args) {
         App app = new App();
         Core.hello();
