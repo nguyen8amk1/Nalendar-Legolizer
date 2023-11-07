@@ -5,7 +5,10 @@ public class Voxelizer {
     /*
     TODO:
         input:  3d filename
-        output: 3d voxelize information
+        output: 3d voxelize information (a voxel format that can be rendered using our 3d engine)
+            -> a list of voxel position ?? -> this seems BETTER
+            -> or just a class that comes with a render method ? (this will be hard to batch)
+
         // for now we just use void as return type
     * */
 
