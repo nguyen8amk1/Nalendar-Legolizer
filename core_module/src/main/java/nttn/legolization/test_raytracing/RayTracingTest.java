@@ -8,6 +8,16 @@ public class RayTracingTest {
             output ppm image
     * */
 
+    private char clampChar(char r) {
+        if(r < 0) {
+            r = 0;
+        }
+        else if (r > 255) {
+            r = 255;
+        }
+        return r;
+    }
+
     private Vector3d castRay(Ray ray) {
         Sphere sphere = new Sphere(new Vector3d(0.0f, 0.0f, -1.0f), 0.5);
         double hit = RayIntersectionChecker.raySphere(ray, sphere);
@@ -42,11 +52,11 @@ public class RayTracingTest {
                 Ray ray = new Ray(new Vector3d(0.0f), new Vector3d(u, v, -1.0f));
                 Vector3d colour = castRay(ray);
 
-                byte r = (byte)(255 * colour.x);
-                byte g = (byte)(255 * colour.y);
-                byte b = (byte)(255 * colour.z);
-                byte a = (byte)255;
-                System.out.println(colour);
+                char r = clampChar((char)(255.99 * colour.x));
+                char g = clampChar((char)(255.99 * colour.y));
+                char b = clampChar((char)(255.99 * colour.z));
+                char a = clampChar((char)255);
+//                System.out.println(colour);
 
                 int color = (a << 24) | (r << 16) | (g << 8) | b;
                 pixels[j][i] = color;
