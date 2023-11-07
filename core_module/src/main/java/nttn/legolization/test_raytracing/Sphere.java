@@ -4,8 +4,8 @@ package nttn.legolization.test_raytracing;
 import org.joml.Vector3d;
 
 public class Sphere {
-    private Vector3d center;
-    private double radius;
+    private final Vector3d center;
+    private final double radius;
     public Sphere(Vector3d center, double radius ) {
         this.center = center;
         this.radius = radius;

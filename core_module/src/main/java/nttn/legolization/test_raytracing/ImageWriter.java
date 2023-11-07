@@ -1,20 +1,33 @@
 package nttn.legolization.test_raytracing;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 public class ImageWriter {
-    public static void toPPM(int[][] pixels, String filename) {
-        int height = pixels.length;
-        int width =  pixels[0].length;
-        String first = "P6\n" +width+ " " + height + "\n255\n";
-        // TODO: write to the ppm file;
-        for (int j = 0; j < height; ++j) {
-            for (int i = 0; i < width; ++i) {
-                int color = pixels[j][i];
-                System.out.println(color);
-//                byte r = ;
-//                byte g = ;
-//                byte b = ;
+    public static void toPNG(int[][] pixels, String filename) {
+        int width = pixels.length;
+        int height = pixels[0].length;
+
+        // Create a BufferedImage to hold the pixel data
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+
+        // Populate the BufferedImage with pixel data
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                int pixelValue = pixels[x][y];
+                image.setRGB(x, y, pixelValue);
             }
         }
-    }
 
+        try {
+            // Write the BufferedImage to a PNG file
+            ImageIO.write(image, "png", new File(filename));
+            System.out.println("PNG image saved successfully to: " + filename);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error while saving the image: " + e.getMessage());
+        }
+    }
 }

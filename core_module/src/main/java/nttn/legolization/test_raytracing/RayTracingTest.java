@@ -39,11 +39,10 @@ public class RayTracingTest {
 //                char r = (char)(255.99f * colour.x);
 //                char g = (char)(255.99f * colour.y);
 //                char b = (char)(255.99f * colour.z);
-//
-                pixels[j][i] = 100;
+                pixels[j][i] = 0xFFFFFF00;
             }
         }
-        ImageWriter.toPPM(pixels, "output.ppm");
+        ImageWriter.toPNG(pixels, "output.png");
     }
 
 
