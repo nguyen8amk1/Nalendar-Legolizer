@@ -7,16 +7,16 @@ import java.io.IOException;
 
 public class ImageWriter {
     public static void toPNG(int[][] pixels, String filename) {
-        int width = pixels.length;
-        int height = pixels[0].length;
+        int height = pixels.length;
+        int width = pixels[0].length;
 
         // Create a BufferedImage to hold the pixel data
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 
         // Populate the BufferedImage with pixel data
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                int pixelValue = pixels[x][y];
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                int pixelValue = pixels[y][x];
                 image.setRGB(x, y, pixelValue);
             }
         }
