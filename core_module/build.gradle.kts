@@ -23,8 +23,7 @@ dependencies {
     testImplementation(libs.junit)
 
     // This dependency is used by the application.
-    implementation(libs.guava)
-
+    implementation(libs.glm)
 }
 
 // java {

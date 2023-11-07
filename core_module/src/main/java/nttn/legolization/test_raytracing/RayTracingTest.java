@@ -1,5 +1,4 @@
-package nttn.legolization.core;
-
+package nttn.legolization.test_raytracing;
 public class RayTracingTest {
     /*
     TODO: write a ray tracing to 3d triangle mesh
