@@ -1,10 +1,13 @@
 package nttn.legolization.test_raytracing;
-import glm.vec._3.d.Vec3d;
+
+import org.joml.Vector3d;
 
 public class Ray {
-    public Vec3d origin, direction;
-    public Ray(Vec3d origin, Vec3d direction) {
+    public Vector3d origin, direction;
+    public Ray(Vector3d origin, Vector3d direction) {
         this.origin = origin;
         this.direction = direction;
     }
+    public Vector3d origin() { return origin; }
+    public Vector3d direction() { return direction; }
 }

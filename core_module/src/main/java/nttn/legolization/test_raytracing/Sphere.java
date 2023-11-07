@@ -1,8 +1,16 @@
 package nttn.legolization.test_raytracing;
 
-import glm.vec._3.d.Vec3d;
+
+import org.joml.Vector3d;
 
 public class Sphere {
-    public Vec3d center;
-    public float radius;
+    private Vector3d center;
+    private double radius;
+    public Sphere(Vector3d center, double radius ) {
+        this.center = center;
+        this.radius = radius;
+    }
+
+    public Vector3d center() { return center; }
+    public double radius() { return radius; }
 }
