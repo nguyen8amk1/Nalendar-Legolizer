@@ -40,7 +40,6 @@ public class RayTracingTest {
     private final int[][] pixels = new int[HEIGHT][WIDTH];
 
     public void raytrace() {
-        // TODO: modify the pixels 2d array
         final float FOV = 90;
         float scale = (float) Math.tan(Math.toRadians(FOV * 0.5f));
         float image_aspect_ratio = (float)WIDTH / HEIGHT;
