@@ -36,7 +36,7 @@ dependencies {
 
  application {
     // Define the main class for the application.
-    mainClass.set("nttn.legolization.core.Core")
+    mainClass.set("nttn.legolization.core.Main")
  }
 
 tasks.named<Test>("test") {
